@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "apartment": {
+      "type": "string"
+    },
+    "total": {
+      "type": "string"
+    },
+    "paymentMethod": {
+      "type": "string"
+    },
+    "cartItems": {
+      "type": "string"
+    }
+  }
+}
