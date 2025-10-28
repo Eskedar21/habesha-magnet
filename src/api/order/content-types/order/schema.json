@@ -35,14 +35,24 @@
     "apartment": {
       "type": "string"
     },
-    "total": {
-      "type": "string"
-    },
     "paymentMethod": {
       "type": "string"
     },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "cartItems": {
-      "type": "string"
+      "type": "json"
+    },
+    "total": {
+      "type": "decimal"
     }
   }
 }

@@ -486,7 +486,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
   attributes: {
     address: Schema.Attribute.String;
     apartment: Schema.Attribute.String;
-    cartItems: Schema.Attribute.String;
+    cartItems: Schema.Attribute.JSON;
     city: Schema.Attribute.String;
     country: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
@@ -497,10 +497,14 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::order.order'> &
       Schema.Attribute.Private;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     paymentMethod: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     state: Schema.Attribute.String;
-    total: Schema.Attribute.String;
+    total: Schema.Attribute.Decimal;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
